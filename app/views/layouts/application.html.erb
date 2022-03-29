@@ -13,6 +13,8 @@
   </head>
 
   <body>
+ <%= cl_image_tag("https://res.cloudinary.com/dpddszglb/image/upload/v1648559899/cld-sample.jpg",
+      width: 400, height: 300, crop: :fill) %>
   <%= render 'shared/flashes' %>
     <%= yield %>
   </body>

@@ -32,6 +32,9 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'devise'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
+
 
 group :development, :test do
   gem 'pry-byebug'
