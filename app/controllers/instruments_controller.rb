@@ -1,12 +1,6 @@
 class InstrumentsController < ApplicationController
-  before_filter :instrument_from_id , :only => [:show, :edit, :update, :destroy, :reserve]
-  before_filter :require_user, :only => [:index, :new]
   def index
-    if current_user
-      @instruments = Instrument.not_belonging_to_current_user(current_user.id)
-    else
-      @instruments = Instrument.all
-    end
+    @instruments = Instrument.all
   end
 
   def show
