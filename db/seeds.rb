@@ -6,4 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@instruments = Instrument.create([{ name: 'guitar', price: '100.0'}])
+User.destroy_all
+
+user = User.new(email: "user@test.com", password: "azerty1")
+user_1 = User.new(email: "hello@test.com", password: "azerty1")
+user_2 = User.new(email: "coucou@test.com", password: "azerty1")
+user_3 = User.new(email: "admin@test.com", password: "azerty1")
+user_4 = User.new(email: "guitarist@test.com", password: "azerty1")
+user_5 = User.new(email: "pianist@test.com", password: "azerty1")
+
+user.save!
+user_1.save!
+user_2.save!
+user_3.save!
+user_4.save!
+user_5.save!
