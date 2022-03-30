@@ -53,8 +53,19 @@
     <h1 class="text-center">Welcome to instrumento</h1>
   </div>
 
+  <div class="row">
+    <% @instruments.each do |instrument| %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to instrument_path(instrument), class:"text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=asset_path('piano.jpg') %>)">
+            <%= instrument.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 
-
+<%#
     <div class="cards">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
         Breakfast
@@ -67,11 +78,21 @@
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
         Dinner
       </div>
+
+      <div class="card" style="width: 18rem;">
+       <div class="card-img-top" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)"></div>
+       <%#  <img class="card-img-top" src="..." alt="Card image cap"> %>
+<%#         <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
+ %>
 
 
 
-
-  </div>
+  <%# </div> %>
 
 </div>
