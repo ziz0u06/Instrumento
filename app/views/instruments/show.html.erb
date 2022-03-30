@@ -1,17 +1,28 @@
-<div class="text-center"><h1>Mon profil</h1></div>
+<div class="text-center"><h1>Superstar_<%= %> ♩ ♪ ♫ ♬ ♭ ♮</h1></div>
+
 
 <div class="container py-5">
+
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Nom de mon instrument</h5>
+    <p class="card-text">Guitar collector Gibson SX50, utilisée avec un ampli GTX50, on dirait qu'aucun son n'est impossible à produire avec cette guitare. Elle est belle, la touche est agréable et les micros sont bons.</p>
+    <p class="card-text"><small class="text-muted">Postée par ----</small></p>
+  </div>
+</div>
+
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Réserve ton instrument</h3>
         <%= simple_form_for @instrument do |f| %>
-          <%# <%= f.input :start_date, placeholder: 'Date de début'
-          <%# <%= f.input :end_date, placeholder: 'Date de fin' %>
+          <%= f.input :start_date, placeholder: 'Date de début' %>
+          <%= f.input :end_date, placeholder: 'Date de fin' %>
           <%# <%= f.input :city, placeholder: 'Ville' %>
-          <%= f.submit "Book my instrument", class: 'btn btn-flat' %>
+          <%= f.submit "Je choisis cet instrument", class: 'btn btn-primary' %>
         <% end %>
       </div>
+      <%= link_to "⏎ Retourner aux instruments", root_path %>
     </div>
   </div>
 </div>
