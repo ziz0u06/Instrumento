@@ -45,7 +45,9 @@
       <button name="button" type="submit" class="btn btn-primary">
         <i class="fas fa-search"></i> Search
       </button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block">Louer le votre !</button>
     </div>
+
 
   <% end %>
 
@@ -57,7 +59,7 @@
     <% @instruments.each do |instrument| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <%= link_to instrument_path(instrument), class:"text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=asset_path('piano.jpg') %>)">
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= instrument.photo.attached? ? cl_image_path(instrument.photo.key) : asset_path('piano.jpg') %>)">
             <%= instrument.name %>
           </div>
         <% end %>
