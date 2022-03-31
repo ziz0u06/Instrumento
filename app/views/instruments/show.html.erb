@@ -1,41 +1,16 @@
+<div class=" container-fluid my-5 ">
+    <div class="row justify-content-center ">
+        <div class="col-xl-10">
+            <div class="card shadow-lg ">
+                <div class="row p-2 mt-3 justify-content-between mx-sm-2">
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Profil", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
-      </ul>
-    </div>
-  </div>
-</div>
-
+                    <div class="col">
+                        <div class="row justify-content-start ">
+                            <div class="col">
+                            <%= image_tag "logo_blanc.jpg", class: "logo" %>
+                        </div>
+                    </div>
+<div class=" container-fluid my-5 ">
 
 <div class="text-center"><h1>Superstar_<%= %> ♩ ♪ ♫ ♬ ♭ ♮</h1></div>
 
@@ -46,24 +21,36 @@
   <div class="card-body">
     <h5 class="card-title">Nom de mon instrument</h5>
     <p class="card-text">Guitar collector Gibson SX50, utilisée avec un ampli GTX50, on dirait qu'aucun son n'est impossible à produire avec cette guitare. Elle est belle, la touche est agréable et les micros sont bons.</p>
-    <p class="card-text"><small class="text-muted">Postée par <%= current_user.email %></small></p>
+    <p class="card-text"><small class="text-muted">Postée par <%= @user.email %></small></p>
         <p class="card-text"><small class="text-muted"> Disponibilité du <%= @instrument.start_date %> au <%= @instrument.end_date %> </small><p>
-
   </div>
 </div>
 
-  <div class="row">
+  <div class="row ">
+  <img src="https://www.telerama.fr/sites/tr_master/files/styles/simplecrop1000/public/medias/2009/08/media_46027/gibson-story%2CM25463.jpg?itok=FeJbPX7H" class="rounded float-start" alt="...">
+
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Réserve ton instrument</h3>
         <%= simple_form_for [@instrument, @booking] do |f| %>
-          <%= f.input :start_date, placeholder: 'Date de début' %>
-          <%= f.input :end_date, placeholder: 'Date de fin' %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date, as: :date, html5: true %>
           <%# <%= f.input :city, placeholder: 'Ville' %>
           <%= f.submit "Je choisis cet instrument", class: 'btn btn-primary' %>
         <% end %>
       </div>
+      <br>
       <%= link_to "⏎ Retourner aux instruments", root_path %>
     </div>
   </div>
+</div>
+</div>
+ </div>
+ </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
 </div>

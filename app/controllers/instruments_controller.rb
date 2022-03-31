@@ -6,6 +6,7 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
+    @user = User.find(@instrument.user_id)
     @booking = Booking.new
   end
 
@@ -27,8 +28,14 @@ class InstrumentsController < ApplicationController
     redirect_to(instruments_user_path(current_user.id))
   end
 
-  def reserve
-    @reservation = @instrument.reservations.new
+  def create
+    @instrument = Instrument.new(instrument_params)
+    @instrument.user = current_user
+    if @instrument.save!
+      redirect_to user_path(current_user)
+    else
+      render :new
+    end
   end
 
   private
@@ -37,6 +44,6 @@ class InstrumentsController < ApplicationController
   end
 
   def instrument_params
-    params.require(:instrument).permit(:start_date, :end_date, :photo)
+    params.require(:instrument).permit(:name, :price, :start_date, :end_date, :photo)
   end
 end
