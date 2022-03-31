@@ -1,89 +1,132 @@
-<h1>Félicitation</h1>
+<div class=" container-fluid my-5 ">
+    <div class="row justify-content-center ">
+        <div class="col-xl-10">
+            <div class="card shadow-lg ">
+                <div class="row p-2 mt-3 justify-content-between mx-sm-2">
 
-<h2>Vous êtes sur le point de réserver votre instrument</h2>
-
-<div class="padding">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-header">
-                    <strong>Credit Card</strong>
-                    <small>enter your card details</small>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name">
-                            </div>
+                    <div class="col">
+                        <div class="row justify-content-start ">
+                            <div class="col">
+                            <%= image_tag "logo_blanc.jpg", class: "logo" %>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="ccnumber">Credit Card Number</label>
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
-                                    <div class="input-group-append">
-                                            <i class="mdi mdi-credit-card"></i>
-                                        </span>
+
+                </div>
+                <div class="row mx-auto justify-content-center text-center">
+                    <div class="col-12 mt-3 ">
+                        <nav aria-label="breadcrumb" class="second ">
+
+                        </nav>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="col-md-5">
+                        <div class="card border-0">
+                            <div class="card-header pb-0">
+                                <h2 class="card-title space ">Confirmation de votre réservation</h2>
+                                <p class="card-text text-muted mt-4 space">Adresse de livraison</p>
+                                <hr class="my-0">
+                            </div>
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto mt-0">
+                                        <p><b>15 avenue de la Paix, 75008 Paris France</b></p>
                                     </div>
+                                    <div class="col-auto">
+                                        <p><b>michael.myer@gmail.com</b> </p>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <p class="text-muted mb-2">Coordonnées bancaires</p>
+                                        <hr class="mt-0">
+                                    </div>
+                                </div>
+                                <div class="form-group"> <label for="NAME" class="small text-muted mb-1">NOM</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Nom du propriétaire de la carte"> </div>
+                                <div class="form-group"> <label for="NAME" class="small text-muted mb-1">NUMERO DE CARTE</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="4534 5555 5555 5555"> </div>
+                                <div class="row no-gutters">
+                                    <div class="col-sm-6 pr-sm-2">
+                                        <div class="form-group"> <label for="NAME" class="small text-muted mb-1">DATE DE VALIDITÉ</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="06/21"> </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group"> <label for="NAME" class="small text-muted mb-1">CODE CVC</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="183"> </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-md-5">
+                                    <div class="col"> <button type="button" name="" id="" class="btn btn-lg btn-block ">PAIEMENT €57</button> </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-sm-4">
-                            <label for="ccmonth">Month</label>
-                            <select class="form-control" id="ccmonth">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-sm-4">
-                            <label for="ccyear">Year</label>
-                            <select class="form-control" id="ccyear">
-                                <option>2014</option>
-                                <option>2015</option>
-                                <option>2016</option>
-                                <option>2017</option>
-                                <option>2018</option>
-                                <option>2019</option>
-                                <option>2020</option>
-                                <option>2021</option>
-                                <option>2022</option>
-                                <option>2023</option>
-                                <option>2024</option>
-                                <option>2025</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="cvv">CVV/CVC</label>
-                                <input class="form-control" id="cvv" type="text" placeholder="123">
+                    <div class="col-md-5">
+                        <div class="card border-0 ">
+                            <div class="card-header card-2">
+                                <p class="card-text text-muted mt-md-4 mb-2 space">VOTRE RESERVATION </p>
+                                <hr class="my-2">
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto col-md-7">
+                                        <div class="media flex-column flex-sm-row"> <img class=" img-fluid" src="https://www.telerama.fr/sites/tr_master/files/styles/simplecrop1000/public/medias/2009/08/media_46027/gibson-story%2CM25462.jpg?itok=Dp0RNzYf" width="62" height="62">
+                                            <div class="media-body my-auto">
+                                                <div class="row ">
+                                                    <div class="col-auto">
+                                                        <p class="mb-0"><b>GUITARE GIBSON</b></p><small class="text-muted">Une semaine</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" pl-0 flex-sm-col col-auto my-auto">
+                                        <p class="boxed-1">1</p>
+                                    </div>
+                                    <div class=" pl-0 flex-sm-col col-auto my-auto ">
+                                        <p><b>€57</b></p>
+                                    </div>
+                                </div>
+
+                                <hr class="my-2">
+
+                                <hr class="my-2">
+                                <div class="row ">
+                                    <div class="col">
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <p class="mb-1"><b>Sous-total</b></p>
+                                            </div>
+                                            <div class="flex-sm-col col-auto">
+                                                <p class="mb-1"><b>€57</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-between">
+                                            <div class="col">
+                                                <p class="mb-1"><b>livraison</b></p>
+                                            </div>
+                                            <div class="flex-sm-col col-auto">
+                                                <p class="mb-1"><b>Offerte</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <p><b>Total</b></p>
+                                            </div>
+                                            <div class="flex-sm-col col-auto">
+                                                <p class="mb-1"><b>€57</b></p>
+                                            </div>
+                                        </div>
+                                        <hr class="my-0">
+                                    </div>
+                                </div>
+                                 </div>
+        <%= link_to "⏎ Retourner aux instruments", root_path %>
+    </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-sm btn-success float-right" type="submit">
-                        <i class="mdi mdi-gamepad-circle"></i> Continue</button>
-                    <button class="btn btn-sm btn-danger" type="reset">
-                        <i class="mdi mdi-lock-reset"></i> Reset</button>
-                </div>
             </div>
         </div>
-        <%= link_to "⏎ Retourner aux instruments", root_path %>
-    </div>
+
+</div>
 </div>
