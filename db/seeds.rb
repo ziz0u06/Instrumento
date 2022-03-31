@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require "open-uri"
 
 Booking.destroy_all
 Instrument.destroy_all
@@ -28,7 +28,7 @@ user_5.save!
 
 
 
-instrument = Instrument.new(name: "guitare", price: 100.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument = Instrument.new(name: "flute", price: 100.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
 instrument.user = user
 instrument.save!
 
@@ -39,6 +39,12 @@ instrument_1.save!
 instrument_2 = Instrument.new(name: "piano", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
 instrument_2.user = user_2
 instrument_2.save!
+
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_3 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_3.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_3.user = user_3
+instrument_3.save!
 
 booking = Booking.new(start_date: Date.new(2022, 6, 20), end_date: Date.new(2022, 7, 29), status: false)
 booking.user = user_1

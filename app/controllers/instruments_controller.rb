@@ -6,6 +6,7 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -15,15 +16,11 @@ class InstrumentsController < ApplicationController
   def edit
   end
 
-  def create
-    result = Instrument.validate_and_create params, current_user
-    process_result_from_model result
-  end
-
   def update
-    result = Instrument.validate_and_update params, @instrument, current_user
-    process_result_from_model result
-  end
+    @instrument = Instrument.find(params[:id])
+    @instrument.update(instrument_params)
+      redirect_to instrument_path(@instrument)
+    end
 
   def destroy
     @Instrument.destroy
@@ -39,11 +36,7 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.find(params[:id])
   end
 
-  def process_result_from_model result
-    if !result[:error]
-      flash_and_redirect result
-    else
-      flash_and_render_action result
-    end
+  def instrument_params
+    params.require(:instrument).permit(:start_date, :end_date, :photo)
   end
 end
