@@ -18,6 +18,11 @@ user_2 = User.new(email: "coucou@test.com", password: "azerty1")
 user_3 = User.new(email: "admin@test.com", password: "azerty1")
 user_4 = User.new(email: "guitarist@test.com", password: "azerty1")
 user_5 = User.new(email: "pianist@test.com", password: "azerty1")
+user_6 = User.new(email: "drum@test.com", password: "azerty1")
+user_7 = User.new(email: "team@test.com", password: "azerty1")
+user_8 = User.new(email: "work@test.com", password: "azerty1")
+user_9 = User.new(email: "choose@test.com", password: "azerty1")
+user_10 = User.new(email: "flower@test.com", password: "azerty1")
 
 user.save!
 user_1.save!
@@ -25,6 +30,11 @@ user_2.save!
 user_3.save!
 user_4.save!
 user_5.save!
+user_6.save!
+user_7.save!
+user_8.save!
+user_9.save!
+user_10.save!
 
 
 
@@ -45,6 +55,36 @@ instrument_3 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new
 instrument_3.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
 instrument_3.user = user_3
 instrument_3.save!
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_4 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_4.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_4.user = user_4
+instrument_4.save!
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_5 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_5.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_5.user = user_5
+instrument_5.save!
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_6 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_6.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_6.user = user_6
+instrument_6.save!
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_8 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_8.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_8.user = user_8
+instrument_8.save!
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_8 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_8.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_8.user = user_8
+instrument_8.save!
+file = URI.open('https://res.cloudinary.com/dcxr19oc4/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1648679507/a9cyyxx1dbxapfttgbx9.jpg')
+instrument_9 = Instrument.new(name: "guitare", price: 85.0, start_date: Date.new(2022, 6, 10), end_date: Date.new(2022, 9, 10))
+instrument_9.photo.attach(io: file, filename: 'guitare.jpg', content_type: 'image/jpg')
+instrument_9.user = user_9
+instrument_9.save!
 
 booking = Booking.new(start_date: Date.new(2022, 6, 20), end_date: Date.new(2022, 7, 29), status: false)
 booking.user = user_1
