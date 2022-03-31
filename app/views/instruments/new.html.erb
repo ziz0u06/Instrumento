@@ -5,6 +5,7 @@
         <h3>Publiez votre instrument</h3>
         <%= simple_form_for @instrument do |f| %>
           <%= f.input :name, placeholder: 'Your Instrument' %>
+          <%= f.input :description, placeholder: 'Your description' %>
           <%= f.input :price, placeholder: 'Your price' %>
           <%= f.input :start_date, as: :date, html5: true %>
           <%= f.input :end_date, as: :date, html5: true %>
