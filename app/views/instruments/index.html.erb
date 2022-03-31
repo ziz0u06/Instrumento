@@ -18,79 +18,31 @@
   </div>
  <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">List of instruments</h3>
-    <%= link_to "Publiez lz votre", new_instrument_path, class: "btn btn-flat" %>
-  </div>
-  <div class="row">
-    <% @instruments.each do |instrument| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to instrument_path(instrument), class:"text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= instrument.photo.attached? ? cl_image_path(instrument.photo.key) : asset_path('piano.jpg') %>)">
-            <%= instrument.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+    <%= link_to "Proposez le votre", new_instrument_path, class: "btn btn-primary" %>
   </div>
 
-<%#
-    <div class="cards">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        Breakfast
-      </div>
+<div class="container welcome-page">
+    <div class="row">
+      <% @instruments.each do |instrument| %>
+        <div class="col-lg-4 mb-4">
+            <div class="card p-0">
+            <%= link_to instrument_path(instrument), class:"text-decoration-none" do %>
+                <div class="card-image">
+                <% if instrument.photo.attached? %>
+                  <%= cl_image_tag instrument.photo.key ,width: 400, height: 350, crop: :fill %>
+                <% else %>
+                  <%= image_tag 'piano.jpg', width: 400, height: 350, crop: :fill %>
+                <% end %>
+                  <img src="https://images.pexels.com/photos/2746187/pexels-photo-2746187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                    <h4 class="pt-2"><%= instrument.name %></h4>
+                    <h5><%= instrument.price %></h5>
 
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-        Lunch
-      </div>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        Dinner
-      </div>
-
-      <div class="card" style="width: 18rem;">
-       <div class="card-img-top" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)"></div>
-       <%#  <img class="card-img-top" src="..." alt="Card image cap"> %>
-<%#         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <% end %>
+            </div>
         </div>
-      </div>
+        <% end %>
     </div>
- %>
-
-
-
-  <%# </div> %>
-
-
-
-
-<div class="row text-center">
-
-      <!--Grid column-->
-      <div class="col-md-6 mb-4">
-
-        <h2 class="my-5 h2">Basic example</h2>
-
-        <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
-          data-holder-rendered="true">
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-md-6 mb-4">
-
-        <h2 class="my-5 h2">With shadow</h2>
-
-        <img class="rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
-          data-holder-rendered="true">
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-  </div>
 </div>
