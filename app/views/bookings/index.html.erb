@@ -1,4 +1,19 @@
-<h1>Félicitation</h1>
+<h1 class="container">My bookings</h1>
+
+<div class="container">
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li><%= link_to booking, booking_path(booking) %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+
+
+<%# <h1>Félicitation</h1>
 
 <h2>Vous êtes sur le point de réserver votre instrument</h2>
 
@@ -85,5 +100,5 @@
             </div>
         </div>
         <%= link_to "⏎ Retourner aux instruments", root_path %>
-    </div>
-</div>
+    <%# </div>
+</div> %>
