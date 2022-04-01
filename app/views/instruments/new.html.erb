@@ -2,11 +2,6 @@
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
-<<<<<<< HEAD
-        <h3>Create a new list</h3>
-        <%= simple_form_for @instrument do |f| %>
-          <%= f.input :name, placeholder: 'Drama' %>
-=======
         <h3>Publiez votre instrument</h3>
         <%= simple_form_for @instrument do |f| %>
           <%= f.input :name, placeholder: 'Your Instrument' %>
@@ -14,7 +9,6 @@
           <%= f.input :start_date, as: :date, html5: true %>
           <%= f.input :end_date, as: :date, html5: true %>
           <%= f.input :photo, as: :file %>
->>>>>>> 498135ff4ab3c15e2c8b9037ed75aa90e841655c
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>

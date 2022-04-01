@@ -19,8 +19,8 @@
 
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title">Nom de mon instrument</h5>
-    <p class="card-text">Guitar collector Gibson SX50, utilisée avec un ampli GTX50, on dirait qu'aucun son n'est impossible à produire avec cette guitare. Elle est belle, la touche est agréable et les micros sont bons.</p>
+    <h5 class="card-title"><% @instrument.name %></h5>
+    <p class="card-text"></p>
     <p class="card-text"><small class="text-muted">Postée par <%= @user.email %></small></p>
         <p class="card-text"><small class="text-muted"> Disponibilité du <%= @instrument.start_date %> au <%= @instrument.end_date %> </small><p>
   </div>
