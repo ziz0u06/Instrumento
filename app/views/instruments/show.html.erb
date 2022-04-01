@@ -27,7 +27,7 @@
 </div>
 
   <div class="row ">
-  <img src="https://www.telerama.fr/sites/tr_master/files/styles/simplecrop1000/public/medias/2009/08/media_46027/gibson-story%2CM25463.jpg?itok=FeJbPX7H" class="rounded float-start" alt="...">
+  <%= cl_image_tag @instrument.photo.key, height: 400, width: 800, crop: :fill %>
 
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
