@@ -19,10 +19,10 @@
 
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title">Guitar Gibson SX50</h5>
-    <p class="card-text">Guitar collector Gibson SX50, utilisée avec un ampli GTX50, on dirait qu'aucun son n'est impossible à produire avec cette guitare. Elle est belle, la touche est agréable et les micros sont bons.</p>
+    <h5 class="card-title"><%= @instrument.name %></h5>
+    <p class="card-text"><%=@instrument.description %></p>
     <p class="card-text"><small class="text-muted">Postée par <%= @user.email %></small></p>
-        <p class="card-text"><small class="text-muted"> Disponibilité du 01/04 au 30/04 </small><p>
+        <p class="card-text"><small class="text-muted"> <%= @instrument.start_date %> <%= @instrument.end_date %></small><p>
   </div>
 </div>
 
