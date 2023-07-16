@@ -35,7 +35,7 @@ gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem "geocoder"
-gem 'open-uri'
+gem 'open-uri', '>= 0.2.0'
 gem 'pg_search', '~> 2.3.0'
 
 
