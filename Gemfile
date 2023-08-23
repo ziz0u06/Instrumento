@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.5'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
@@ -12,7 +12,7 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6.0.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.4', '>= 5.4.3'
+gem 'webpacker', '~> 5.4', '>= 5.4.4'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -31,8 +31,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form', github: 'heartcombo/simple_form'
-gem 'devise'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'devise', '>= 4.9.0'
+gem 'dotenv-rails', '>= 2.8.0', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem "geocoder"
 gem 'open-uri'
@@ -43,7 +43,7 @@ gem 'pg_search', '~> 2.3.0'
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 2.8.0'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
